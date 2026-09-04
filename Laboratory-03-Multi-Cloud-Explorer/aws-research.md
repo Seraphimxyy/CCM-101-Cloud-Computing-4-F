@@ -1,58 +1,53 @@
-# Azure Research
+# AWS Research
 
-## 1. Brief Overview - who runs it, launch year, what it's known for
+## 1. Brief Overview
 
-Microsoft runs Microsoft Azure. Announced Oct 2008 as Windows Azure (Project Red Dog), GA Feb 1, 2010, renamed Microsoft Azure Mar 25, 2014.
+Amazon Web Services (AWS) is the cloud division of Amazon, launched spring 2006 with S3 (Mar 14, 2006) and EC2 (Aug 2006).
 
-In my words: Microsoft's cloud with 600+ services. Known as the enterprise/hybrid cloud, best for Windows/.NET/SQL Server/Active Directory/Microsoft 365 shops, and now AI via Azure OpenAI.
+In my words: world's most comprehensive/broadly adopted cloud with 200+ services for compute, storage, DB, networking, AI/security, used by startups, enterprises and governments to cut cost, scale and innovate.
 
-## 2. Global Infrastructure - # Regions/AZs you saw, what is Region/AZ/paired region
+## 2. Global Infrastructure
 
-Seen Sept 2026: 60+ active regions, 70+ announced, 500+ datacenters. ~47 global regions listed, 37 with AZs. Largest footprint of any cloud.
+Seen at aws.amazon.com/about-aws/global-infrastructure:
 
-- Region: Set of datacenters in one place, e.g. East US, West Europe. Fixes data-residency, latency, price.
-- AZ: Separate datacenter groups inside one region with independent power/cooling/network, usually 3 per region. Deploy across 2+ zones = survive datacenter loss.
-- Paired region: Two regions in same geography linked by Microsoft, e.g. East US <-> West US, Japan East <-> Japan West. Used for geo-replication, sequential updates, recovery priority. Not all new regions have a pair.
+- 39 Regions, 124 Availability Zones, 750+ CloudFront POPs + 15 Regional edge caches, 46 Local/Wavelength Zones. Plans: +7 AZs +2 Regions (Saudi Arabia, Chile). ~20M km private fiber.
+- Region: separate geographic area, e.g. us-east-1. Independent for compliance/residency.
+- AZ: 1+ isolated datacenters inside a Region, min 3 per Region, independent power/cooling/net, low-latency encrypted links. Spread across AZs = high availability.
+- Edge Location: CDN cache for CloudFront/Route 53/Shield, close to users for low latency, not a full region.
 
-## 3. Portal - 3 things you can do + screenshot
+## 3. Cloud Management Console
 
-Portal: https://portal.azure.com - unified web console.
+Console: https://console.aws.amazon.com - web UI for all services.
 
-1. Create/manage resources: Create a resource, start/stop/resize VMs, create DBs, move/lock/tag resources.
-2. Monitor/control cost: Overview metrics, Activity Log, Alerts, Cost Management, custom dashboards.
-3. Secure/govern: RBAC, Entra ID access, Cloud Shell, support tickets.
+What you can do: search/launch services, create/manage EC2/S3/VPC/RDS visually, manage Billing + IAM users/roles, monitor via widgets/CloudWatch/Health, run CLI via CloudShell, ask Amazon Q.
 
-![Azure Portal](screenshots/azure-homepage.png)
+![AWS Console](screenshots/aws-homepage.png)
 
-## 4. Four Core Services - 1 line each: VM, Blob/VNet/SQL or Entra
+## 4. Four Core Services
 
-- Compute - Azure Virtual Machines: On-demand Linux/Windows VMs with full OS control, scale sets for auto-scale.
-- Storage - Azure Blob Storage: Scalable object storage for unstructured data with geo-replication.
-- Networking - Azure Virtual Network (VNet): Private network with subnets, NSGs, peering, VPN/ExpressRoute.
-- Database/Identity - Azure SQL Database / Microsoft Entra ID: Managed SQL Server as a service. Entra ID (ex-Azure AD) for SSO, RBAC, Conditional Access.
+- Compute: EC2 - resizable virtual servers for any workload.
+- Storage: S3 - unlimited object storage, 11x9s durability across 3+ AZs.
+- Networking: VPC - private network with subnets, route tables, security groups. Delivery: CloudFront CDN.
+- Database/Identity: RDS / IAM - managed MySQL/Postgres/Aurora with Multi-AZ. IAM controls users/roles/policies globally.
 
 ## 5. Three Advantages
 
-1. Best for Microsoft stacks: Same login for M365 + Azure, easy .NET/SQL/Windows migration.
-2. Hybrid + compliance: Arc, ExpressRoute, sovereign clouds, paired regions for DR.
-3. Global scale + AI: 70+ regions with zones, PaaS to Kubernetes, OpenAI integration.
+1. Pay-as-you-go, no upfront, scale to zero with Free Tier/Savings Plans.
+2. Elastic + global: scale to thousands in minutes, 39 regions for latency/DR.
+3. Breadth + security/reliability: 200+ integrated services, 3+ AZs per region, most secure cloud, 15yr Gartner Leader.
 
-## 6. Use Cases - especially Microsoft-stack shops
+## 6. Typical Enterprise Use Cases
 
-1. Lift-and-shift Windows/.NET/SQL Server to VMs/SQL Managed Instance/App Service with Entra ID.
-2. Hybrid M365 intranet with single sign-on, on-prem DB + Azure burst.
-3. Data + AI: Data Lake + Synapse/Fabric + Azure OpenAI chat over company data.
+1. Web/SaaS hosting + migration: EC2+RDS+ELB with Auto Scaling.
+2. Backup/DR: S3/Glacier + Multi-AZ/Multi-Region replication.
+3. Analytics/AI: S3 + Athena/Redshift/SageMaker/Bedrock.
 
-## Sources - list URLs + accessed date
+## Sources
 
 Accessed: 2026-09-04
 
-- https://azure.microsoft.com/en-us/explore/global-infrastructure
-- https://learn.microsoft.com/en-us/azure/reliability/regions-overview
-- https://learn.microsoft.com/en-us/azure/reliability/regions-list
-- https://learn.microsoft.com/en-us/azure/reliability/availability-zones-overview
-- https://learn.microsoft.com/en-us/azure/reliability/regions-paired
-- https://learn.microsoft.com/en-us/azure/azure-portal/azure-portal-overview
-- https://learn.microsoft.com/en-us/azure/virtual-machines/overview
-- https://azure.microsoft.com/en-us/products/storage/blobs/
-- https://en.wikipedia.org/wiki/Microsoft_Azure
+- https://aws.amazon.com/what-is-aws/
+- https://aws.amazon.com/about-aws/our-origins/
+- https://aws.amazon.com/about-aws/global-infrastructure/
+- https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/what-is.html
+- https://docs.aws.amazon.com/
