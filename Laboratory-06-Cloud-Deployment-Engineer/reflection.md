@@ -10,4 +10,4 @@ We used environment variables like `MYSQL_PASSWORD`, `MYSQL_DATABASE`, `MYSQL_US
 
 Deploying enterprise cloud storage in minutes felt empowering. Seeing Compose pull both images, then opening port 8080 to the real Nextcloud setup screen, proved two small definitions can replace a full server install. Running `docker-compose down` and seeing clean removal made multi-container work feel manageable.
 
-Since Mission 1, my view shifted from cloud as rented servers to cloud as reproducible systems. From concepts to single containers to MinIO storage, I can now define, deploy, verify, and tear down a two-tier stack as code and document it in Markdown. That shift from typing commands to writing infrastructure is what readied me for the Deployment Team. (298 words)
+Since Mission 1, my view shifted from cloud as rented servers to cloud as reproducible systems. From concepts to single containers to MinIO storage, I can now define, deploy, verify, and tear down a two-tier stack as code and document it in Markdown. That shift from typing commands to writing infrastructure is what readied me for the Deployment Team.
